@@ -452,7 +452,7 @@ export const roundTo = (hour: number, step: number, type: 'up' | 'down') => {
 };
 
 
-export function sliceIntoChunks(arr, chunkSize) {
+export function sliceIntoChunks(arr: any[], chunkSize: number) {
   const res = [];
   for (let i = 0; i < arr.length; i += chunkSize) {
       const chunk = arr.slice(i, i + chunkSize);
