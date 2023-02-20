@@ -450,3 +450,13 @@ export const roundTo = (hour: number, step: number, type: 'up' | 'down') => {
   const nextMinutes = Math.floor(totalMinutes / step) * step;
   return nextMinutes / 60;
 };
+
+
+export function sliceIntoChunks(arr, chunkSize) {
+  const res = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+      const chunk = arr.slice(i, i + chunkSize);
+      res.push(chunk);
+  }
+  return res;
+}
